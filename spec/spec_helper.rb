@@ -1,3 +1,8 @@
+if ENV['CI']
+  require 'simplecov'
+  SimpleCov.start
+end
+
 RSpec.configure do |config|
   config.backtrace_exclusion_patterns << /\.bundle/
 
