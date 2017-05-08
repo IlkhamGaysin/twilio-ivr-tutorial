@@ -38,7 +38,7 @@ gem 'seedbank'
 
 group :test do
   gem 'capybara'
-  gem 'codeclimate-test-reporter', require: false
+  gem 'codeclimate-test-reporter', '~> 1.0.0'
   gem 'database_cleaner'
   gem 'email_spec'
   gem 'formulaic'
