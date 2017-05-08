@@ -1,5 +1,6 @@
 # Rails Sekeleton
 [![Build Status](https://semaphoreci.com/api/v1/ilkhamgaysin/rails-skeleton/branches/master/shields_badge.svg)](https://semaphoreci.com/ilkhamgaysin/rails-skeleton)
+[![Code Climate](https://codeclimate.com/github/IlkhamGaysin/rails-skeleton.png)](https://codeclimate.com/github/IlkhamGaysin/rails-skeleton)
 
 ## Project description
 
