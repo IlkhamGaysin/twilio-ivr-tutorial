@@ -1,6 +1,9 @@
+require 'simplecov'
+
 if ENV['CI']
-  require 'simplecov'
-  SimpleCov.start
+  SimpleCov.start do
+    add_filter ['.bundle', 'config', 'spec']
+  end
 end
 
 RSpec.configure do |config|
