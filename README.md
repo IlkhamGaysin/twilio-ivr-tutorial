@@ -1,11 +1,9 @@
-Rails Sekeleton
--
+# Rails Sekeleton
+[![Build Status](https://semaphoreci.com/api/v1/ilkhamgaysin/rails-skeleton/branches/master/shields_badge.svg)](https://semaphoreci.com/ilkhamgaysin/rails-skeleton)
 
-Project description
--
+## Project description
 
-Dependencies
--
+## Dependencies
 
 Information about external dependencies (redis, mongo, postgres, etc).
 
@@ -14,8 +12,7 @@ Information about external dependencies (redis, mongo, postgres, etc).
 - PhantomJS
 - Rails 5
 
-Quick Start
--
+## Quick Start
 
 Clone this repo:
 
@@ -30,30 +27,25 @@ Run setup
 bin/setup
 ```
 
-Scripts
--
+## Scripts
 
 * `bin/setup` - setup required gems, clone example files, run seeds and migrate db if needed
 * `bin/update` - setup required gems and migrate db if needed
 * `bin/quality` - run brakeman and other check for the app
 * `bin/ci` - should be used in the CI to run specs
 
-Documentation & Examples
--
+## Documentation & Examples
 
 Where is documentation and examples (e.g. `./docs`)?
 
-Continuous Integration
--
+## Continuous Integration
 
 Wating for integration...
 
-Servers
--
+## Servers
 
 Wating for integration...
 
-Deployment
--
+## Deployment
 
 Wating for integration...
