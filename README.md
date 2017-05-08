@@ -3,6 +3,8 @@
 [![Code Climate](https://codeclimate.com/github/IlkhamGaysin/rails-skeleton.png)](https://codeclimate.com/github/IlkhamGaysin/rails-skeleton)
 
 ## Project description
+Rails Skeleton is the base Rails application template used for creating apps from scratch.
+It's based on Rails 5 and Ruby 2.4.0.
 
 ## Dependencies
 
