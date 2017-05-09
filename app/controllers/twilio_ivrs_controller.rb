@@ -3,7 +3,7 @@ class TwilioIvrsController < ApplicationController
     Hello, thank you for your calling.
   }.freeze
 
-  VOICE = 'voice'.freeze
+  VOICE = 'alice'.freeze
   LANGUAGE = 'en-GB'.freeze
 
   skip_before_action :verify_authenticity_token
@@ -12,8 +12,8 @@ class TwilioIvrsController < ApplicationController
   def welcome
     response = Twilio::TwiML::Response.new do |r|
       r.Say WELCOME_MESSAGE
-      r.Play 'http://demo.twilio.com/hellomonkey/monkey.mp3'
-      r.Gather numDigits: '1', action: menu_path do |g|
+      r.Play 'http://demo.twilio.com/hellomonkey/monkey.mp3', voice: VOICE, language: LANGUAGE
+      r.Gather numDigits: '1', action: menu_url , method: :get, timeout: 3 do |g|
         g.Say %Q{
           If you want to hear
           random names of any heouros of Game of Thrones,

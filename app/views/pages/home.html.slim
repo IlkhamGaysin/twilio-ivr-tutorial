@@ -1,8 +1,19 @@
-h1 Here you can observe list of calls
+h1 Here you can observe list of incoming calls
 .row
   - if calls.any?
-    - calls.each do |call|
-      span
-        = call.direction
+    table.table
+      tr
+        th From
+        th Direction
+        th Duration
+
+      - calls.each do |call|
+        tr
+          td
+            = call.from
+          td
+            = call.direction
+          td
+            = call.duration
   - else
    | There is no any call

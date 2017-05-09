@@ -24,5 +24,10 @@ module TwilioGlastonbuddy
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
+    if Rails.env.development?
+      routes.default_url_options[:host] = ENV.fetch('NGROK_HOST', '')
+    else
+      routes.default_url_options[:host] = ENV.fetch('HOST', '')
+    end
   end
 end
