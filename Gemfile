@@ -35,6 +35,7 @@ gem 'pundit'
 gem 'responders'
 gem 'rollbar'
 gem 'seedbank'
+gem 'twilio-ruby'
 
 group :test do
   gem 'capybara'
