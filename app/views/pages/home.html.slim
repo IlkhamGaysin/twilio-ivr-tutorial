@@ -1,1 +1,8 @@
-h1 Home
+h1 Here you can observe list of calls
+.row
+  - if calls.any?
+    - calls.each do |call|
+      span
+        = call.direction
+  - else
+   | There is no any call
