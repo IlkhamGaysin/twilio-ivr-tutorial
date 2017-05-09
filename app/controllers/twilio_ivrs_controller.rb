@@ -11,18 +11,22 @@ class TwilioIvrsController < ApplicationController
 
   def welcome
     response = Twilio::TwiML::Response.new do |r|
-      r.Say WELCOME_MESSAGE
-      r.Play 'http://demo.twilio.com/hellomonkey/monkey.mp3', voice: VOICE, language: LANGUAGE
-      r.Gather numDigits: '1', action: menu_url , method: :get, timeout: 3 do |g|
+      r.Say WELCOME_MESSAGE, voice: VOICE, language: LANGUAGE
+      r.Play 'http://demo.twilio.com/hellomonkey/monkey.mp3'
+      r.Gather numDigits: '1', action: menu_url , method: :get, timeout: 5 do |g|
         g.Say %Q{
           If you want to hear
-          random names of any heouros of Game of Thrones,
+          random name of any heouros of Game of Thrones,
           please choose 1},
           voice: VOICE, language: LANGUAGE
         g.Say %Q{
           If you want to hear
-          random names of any heouros of Harry Potter,
+          random name of any heouros of Harry Potter,
           please choose 2},
+          voice: VOICE, language: LANGUAGE
+        g.Say %Q{
+          To repeat this message,
+          please choose 9},
           voice: VOICE, language: LANGUAGE
       end
     end
@@ -38,6 +42,8 @@ class TwilioIvrsController < ApplicationController
       twiml_say(Faker::GameOfThrones.character)
     when 2
       twiml_say(Faker::HarryPotter.character)
+    when 9
+      redirect_to welcome_path
     else
       redirect_to welcome_path
     end
